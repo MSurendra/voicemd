@@ -1,10 +1,37 @@
 <html>
+<header>
+  <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+            background-color: #f8d7e0; /* Light pink background */
+        }
+
+        img {
+            position: absolute;
+            top: 30%; /* Places the image 40% down from the top */
+            left: 50%; /* Centers the image horizontally */
+            transform: translateX(-50%); /* Adjusts the image to be perfectly centered */
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</header>
 <body>
 <script>
   var vapiInstance = null;
   const assistant = "cb1d3ddd-ae89-4d2e-a539-36d71fcf69e0"; // Substitute with your assistant ID
   const apiKey = "f8aa5f0c-83ec-4ecb-a6d7-d1091536e330"; // Substitute with your Public key from Vapi Dashboard.
-  const buttonConfig = {}; // Modify this as required
+  const buttonConfig = {
+    position: "center", // "bottom" | "top" | "left" | "right" | "top-right" | "top-left" | "bottom-left" | "bottom-right"
+    offset: "40px", // decide how far the button should be from the edge
+    width: "50px", // min-width of the button
+    height: "50px", // height of the button
+    
+  }; // Modify this as required
 
   (function (d, t) {
     var g = document.createElement(t),
@@ -26,7 +53,7 @@
 
 </script>
 
-  
+<img src="https://kangaroocareindia.com/images/kangaroo-care-new-logo.png" alt="Kangaroo Care">
 </body>
   
 </html>
